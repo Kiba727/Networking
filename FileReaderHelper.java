@@ -27,8 +27,6 @@ public class FileReaderHelper {
     public FileReaderHelper(String fileName) throws IOException {
         words = new ArrayList<>();
         loadWords(fileName);
-        printAllWords();
-
     }
 
     private void loadWords(String fileName) throws IOException {
@@ -46,13 +44,19 @@ public class FileReaderHelper {
     }
 
     public String getMatchingWords(String prefix) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder matches = new StringBuilder();
+
         for (String w: words) {
             if (w.toLowerCase().startsWith(prefix.toLowerCase())) {
-                if (sb.length() > NO_WORDS) sb.append(", ");
+                matches.append(w + " ");
             }
         }
-        return sb.length() > NO_WORDS ? sb.toString() : "No words found starting with " + prefix;
+
+        if(matches.isEmpty()){
+            return "No words starting with" + prefix;
+        }
+
+        return matches.toString();
     }
 
     private void printAllWords() {
