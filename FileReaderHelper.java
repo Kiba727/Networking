@@ -12,6 +12,12 @@ package Networking;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Class Name: FileReaderHelper
+ * Purpose: This class is designed to read words.txt 
+ *
+ * @author Mack Bautista
+ */
 public class FileReaderHelper {
     
     public static final int NO_WORDS = 0;
