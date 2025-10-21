@@ -1,3 +1,12 @@
+/**
+ * Name(s): 	Mack Bautista, Patrick Dang
+ * Email: 		mbaut981@mtroyal.ca, pdang289@mtroyal.ca
+ * Course: 		COMP3533-002
+ * Instructor: 	Mingwei Gong
+ * Lab: 		5
+ * Due Date: 	Oct. 23, 2025
+ */
+
 package Networking;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
