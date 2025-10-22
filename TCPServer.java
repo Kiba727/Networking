@@ -16,6 +16,14 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+
+/**
+ * Class Name: TCPServer
+ * Purpose: This class implements a simple TCP server that accepts client connections,
+ *          receives prefix strings, and responds with a list of matching words
+ *          from a dictionary file ("words.txt"). The server continues running
+ *          and processing multiple clients sequentially until manually terminated.
+ */
 public class TCPServer {
 
 	public static final String WORDS_TXT = "words.txt";

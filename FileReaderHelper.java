@@ -9,17 +9,18 @@
  */
 
 package Networking;
+
 import java.io.*;
 import java.util.*;
 
 /**
  * Class Name: FileReaderHelper
- * Purpose: This class is designed to read words.txt 
- *
+ * Purpose: This class is designed to read words.txt
  * @author Mack Bautista
+ * @author Patrick Dang
  */
 public class FileReaderHelper {
-    
+
     public static final int NO_WORDS = 0;
 
     private List<String> words;
@@ -45,15 +46,19 @@ public class FileReaderHelper {
 
     public String getMatchingWords(String prefix) {
         StringBuilder matches = new StringBuilder();
-
-        for (String w: words) {
+        int count = 0;
+        for (String w : words) {
             if (w.toLowerCase().startsWith(prefix.toLowerCase())) {
-                matches.append(w + " ");
+                if (count > 0) {
+                   matches.append(", "); 
+                }
+                matches.append(w);
+                count++;
             }
         }
 
-        if(matches.isEmpty()){
-            return "No words starting with" + prefix;
+        if (matches.isEmpty()) {
+            return "No words starting with " + prefix;
         }
 
         return matches.toString();
@@ -61,7 +66,7 @@ public class FileReaderHelper {
 
     private void printAllWords() {
         System.out.println("Printing all loaded words.");
-        for (String word: words) {
+        for (String word : words) {
             System.out.println(word);
         }
         System.out.println("End of word list (" + words.size() + " words total).");

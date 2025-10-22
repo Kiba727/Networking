@@ -13,6 +13,14 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
+
+/**
+ * Class Name: TCPClient
+ * Purpose: Implements the client-side portion of a TCP connection that allows
+ *          a user to input a word prefix and send it to a {@link TCPServer}.
+ *          The server then responds with all words from its repository that
+ *          share the same prefix.
+ */
 public class TCPClient {
 
 	public static void main(String argv[]) throws Exception {
@@ -37,7 +45,7 @@ public class TCPClient {
 
 			modifiedSentence = inFromServer.readLine();
 
-			System.out.println("FROM SERVER: " + modifiedSentence);
+			System.out.println("The following words that start with: " + sentence + ": " + modifiedSentence);
 			sentence = inFromUser.readLine();
 		}
 
