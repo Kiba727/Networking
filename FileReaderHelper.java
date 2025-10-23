@@ -16,8 +16,8 @@ import java.util.*;
 /**
  * Class Name: FileReaderHelper
  * Purpose: This class is designed to read words.txt
- * @author Mack Bautista
- * @author Patrick Dang
+ * @author Mack Bautista - created the FileReaderHelper class and did the reading of words.txt in loadWords().
+ * @author Patrick Dang - created the string matching algorithm getMatchingWords().
  */
 public class FileReaderHelper {
 
@@ -72,3 +72,4 @@ public class FileReaderHelper {
         System.out.println("End of word list (" + words.size() + " words total).");
     }
 }
+
